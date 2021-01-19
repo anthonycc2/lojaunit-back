@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<!-- html-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Loja UNIT</title>
+</head>
+<body>
+<h1>Cadastro Cliente</h1>
+<form action="ControladorCliente" method="POST">
+	<input type="hidden" name="action" value="salvar"/>
+	CPF: <input type="text" name="cpf" required="required"/><br/>
+	Nome: <input type="text" name="nome" required="required"/><br/>
+	E-Mail: <input type="text" name="email" required="required"/><br/>
+	Data de nascimento: <input type="text" name="dataNascimento"/><br/>
+	Sexo: <input type="text" name="sexo"/><br/>
+	Nome social: <input type="text" name="nomeSocial"/><br/>
+	Apelido: <input type="text" name="apelido"/><br/>
+	Telefone: <input type="text" name="telefone"/><br/>
+	<input type="submit" value="Salvar"/>
+</form>
+</body>
+</html>
