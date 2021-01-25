@@ -13,7 +13,7 @@ public class ItemVenda {
 	
 	@EmbeddedId
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private ItemVendaId id;
+	private ItemVendaId itemVendaId;
 	
 	private int quantidade;
 	
@@ -25,17 +25,17 @@ public class ItemVenda {
 	}
 
 	public ItemVenda(Venda venda, Produto produto, int quantidade, double valorUnitario) {
-		this.id = new ItemVendaId(venda, produto);
+		this.itemVendaId = new ItemVendaId(venda, produto);
 		this.quantidade = quantidade;
 		this.valorUnitario = valorUnitario;
 	}
 	
 	public ItemVendaId getId() {
-		return this.id;
+		return this.itemVendaId;
 	}
 	
 	public void setId(ItemVendaId id) {
-		this.id = id;
+		this.itemVendaId = id;
 	}
 
 	public int getQuantidade() {
